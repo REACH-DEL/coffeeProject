@@ -1,0 +1,153 @@
+body {
+  background-color: #d6d9dd;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  position: relative;
+  height: 100vh;
+  width: 20%;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar .navbar-brand {
+  font-size: 2rem;
+  margin: auto;
+}
+.sidebar .navbar-brand img {
+  width: 3rem;
+}
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #469229;
+  border-radius: 2rem;
+  margin: 1rem auto;
+  width: 70%;
+  height: 50px;
+}
+.sidebar .nav-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar .user {
+  padding-left: 0.4rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: #469229;
+  width: 60%;
+  border-radius: 2rem;
+  height: 50px;
+}
+.sidebar .user .user-profile {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.sidebar .user .user-name {
+  padding: 1rem;
+  color: white;
+}
+
+main {
+  width: 80%;
+}
+main .menu-header {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+main .menu-header .hambuger-btn {
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+}
+main .menu-header .search-box {
+  margin-left: 2rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 80%;
+}
+main .menu-header .search-box input {
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 1.5rem;
+}
+main .menu-header .search-box .search-btn {
+  border: none;
+  margin-left: 1rem;
+  background-color: white;
+}
+main .menu-header .search-box .search-btn img {
+  width: 30px;
+}
+main .products .card-container .card .card-image {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+main .products .card-container .card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .products .card-container .card .card-body .card-title {
+  align-self: flex-start;
+}
+main .products .card-container .card .card-body .card-text {
+  align-self: flex-start;
+}
+main .products .card-container .card .card-body .price {
+  color: #469229;
+  align-self: flex-start;
+}
+main .products .card-container .card .card-body .add-to-cart-button {
+  background-color: #cde9d3;
+  width: 90%;
+}
+
+.items {
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 14px;
+}
+.items .place-order {
+  background-color: #469229;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+.items .item {
+  background-color: white;
+  border: 1px solid #ebebeb;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 7px;
+  display: flex;
+}
+.items .item .item-img {
+  width: 160px;
+}
+.items .item .item-detail .price-amount .price-per-item,
+.items .item .item-detail .price-amount .amount,
+.items .item .item-detail .price-amount .final-price {
+  color: #469229;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,236 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+.content {
+  display: block;
+  margin-left: 10px;
+  width: 78%;
+}
+.content .top {
+  position: fixed;
+  right: 25px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  height: 13%;
+  width: 75%;
+}
+.content .top .addBtn {
+  padding: 10px;
+  border: 1px solid rgb(70, 70, 70);
+  display: flex;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.content .top .addBtn:hover {
+  background-color: rgba(87, 87, 87, 0.3);
+}
+.content .top .addBtn p {
+  font-size: larger;
+}
+.content .top .addBtn .size {
+  font-size: 50;
+}
+
+/* addform popup */
+.add-popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.add-popup .add-window {
+  background-color: whitesmoke;
+  width: 70%;
+  height: 80%;
+  box-shadow: 0 5px 10px rgb(0 0 0/20%);
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+}
+.add-popup .add-window .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-popup .add-window .title h3 {
+  color: brown;
+  font-size: larger;
+  margin-left: 10px;
+}
+.add-popup .add-window .title .closeBtn {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.add-popup .add-window .title .closeBtn:hover {
+  background-color: rgb(200, 200, 200);
+}
+.add-popup .add-window .add-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* result popup */
+.success-screen {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.success-screen .success-window {
+  background-color: whitesmoke;
+  width: 70%;
+  height: 80%;
+  box-shadow: 0 5px 10px rgb(0 0 0/20%);
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.success-screen .success-window .close-btn {
+  border-radius: 50%;
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.success-screen .success-window .close-btn:hover {
+  background-color: rgb(200, 200, 200);
+}
+.success-screen .success-window .body {
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.success-screen .success-window .body .material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 80px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  color: blue;
+}
+.success-screen .success-window .body h1 {
+  color: brown;
+}
+.success-screen .success-window .btnDone {
+  display: flex;
+  align-self: center;
+  width: 100px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: blue;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.typeBtnList {
+  margin-top: 100px;
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+  align-items: center;
+}
+.typeBtnList div {
+  width: auto;
+  padding: 10px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.typeBtnList div:hover {
+  background-color: rgba(144, 144, 144, 0.318);
+}
+
+/* content part */
+.content-part {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 5px;
+  background-color: white;
+  margin-top: 10px;
+  height: 85%;
+  width: 100%;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
+}
+.content-card {
+  border-top: 2px solid rgb(214, 214, 214);
+  border-bottom: 2px solid rgb(214, 214, 214);
+  padding: 10px;
+  height: 100px;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+}
+.content-card .right-part {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 20px;
+  width: 300px;
+}
+.content-card .btn-part {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+.content-card .right-part .img {
+  height: 80px;
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-card .right-part .img img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+.content-card .right-part .info {
+  display: block;
+}
+.content-card .right-part .info .detail {
+  font-size: smaller;
+}

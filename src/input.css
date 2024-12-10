@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-text {
+    @apply text-base font-semibold text-dark-brown hover:text-light-brown active:text-light-brown;
+  }
+  .title {
+    @apply text-6xl font-bold;
+  }
+  .navbar-s {
+    @apply flex flex-col gap-5 w-2/5 fixed top-20 right-1 bg-slate-200 shadow-md py-5 px-8 rounded-lg;
+  }
+  .navbar-b {
+    @apply flex flex-row gap-0 justify-around w-full bg-white shadow-none py-0 px-0 static;
+  }
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../asset/font/Caveat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Poppin";
+  src: url("../asset/font/Poppins-Medium.ttf");
+}
