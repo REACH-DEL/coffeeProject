@@ -11,12 +11,16 @@
       class="w-100 px-10 py-10 shadow-lg rounded-2xl bg-red-50 flex flex-col items-center gap-5"
     >
       <h2 class="font-caveat text-6xl font-bold text-dark-brown">Register</h2>
-      <form action="" class="flex flex-col gap-5">
+      <form
+        action="../backend/registerController.php"
+        class="flex flex-col gap-5"
+        method="POST"
+      >
         <input
-          type="text"
-          name="fullname"
+          type="email"
+          name="email"
           id=""
-          placeholder="Enter fullname..."
+          placeholder="Enter email..."
           class="h-12 px-5 rounded-xl border-solid border-2 w-80"
         />
         <input
@@ -26,6 +30,14 @@
           placeholder="Enter username..."
           class="h-12 px-5 rounded-xl border-solid border-2 w-80"
         />
+        <select
+          name="gender"
+          id=""
+          class="border-solid border-2 w-36 h-12 rounded-xl px-5"
+        >
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
         <input
           type="password"
           name="password"

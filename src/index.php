@@ -15,7 +15,10 @@
           <img src="../asset/image/cafelogo.png" alt="" class="w-20" />
           <h1 class="text-dark-brown font-bold text-2xl">Cafe Shop</h1>
         </div>
-        <nav class="lg:w-2/5 sm:w-3/5 hidden sm:block bg-white" id="menu">
+        <nav
+          class="lg:w-2/5 sm:w-3/5 hidden sm:flex sm:gap-3 sm:bg-white sm:static fixed top-20 right-1 bg-slate-200 shadow-md py-5 px-8 rounded-lg w-1/2 sm:flex-row flex-col-reverse sm:shadow-none sm:py-0 sm:px-0 gap-5"
+          id="menu"
+        >
           <ul class="sm:navbar-b navbar-s">
             <li>
               <a href="#home" class="nav-text">Home</a>
@@ -33,7 +36,30 @@
               <a href="#contact" class="nav-text">Contact</a>
             </li>
           </ul>
+          <div
+            class="hover:border-light-brown hover:border-2 rounded-xl px-3 py-2 cursor-pointer active:bg-light-brown sm:flex flex flex-col items-center justify-center"
+            id="account"
+          >
+            <?php include '../backend/userHandler.php'?>
+            <div
+              class="hidden absolute right-10 sm:top-24 top-28 bg-white rounded-xl shadow-lg border-red-950 border-2"
+              id="accountMenu"
+            >
+              <a
+                href=""
+                class="flex gap-2 py-4 px-5 text-dark-brown hover:text-light-brown hover:border-light-brown hover:border-2 rounded-xl active:bg-light-brown active:text-white"
+                ><img src="../asset/icon/account-setting.svg" alt="" />Account
+                setting</a
+              >
+              <a
+                href="login.php"
+                class="flex gap-2 py-4 px-5 text-dark-brown hover:text-light-brown hover:border-light-brown hover:border-2 rounded-xl active:bg-light-brown active:text-white"
+                ><img src="../asset/icon/logout.svg" alt="" />Log out</a
+              >
+            </div>
+          </div>
         </nav>
+
         <button class="block sm:hidden" aria-expanded="false" id="menubtn">
           <img src="../asset/icon/menu.svg" alt="" width="36" height="36" />
         </button>
@@ -310,6 +336,12 @@
       const menu = document.getElementById("menu");
       menubtn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      });
+      const accMenu = document.getElementById("accountMenu");
+      const acc = document.getElementById("account");
+      acc.addEventListener("click", () => {
+        accMenu.classList.toggle("hidden");
       });
     </script>
   </body>

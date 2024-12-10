@@ -1,1 +1,6 @@
 restyle my component assign to meng sea
+today assignment php task:
+1. create database
+2. create login and register backend
+3. combine pages
+4. backend to show data on shop pages

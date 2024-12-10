@@ -10,10 +10,10 @@
     @apply text-6xl font-bold;
   }
   .navbar-s {
-    @apply flex flex-col gap-5 w-2/5 fixed top-20 right-1 bg-slate-200 shadow-md py-5 px-8 rounded-lg;
+    @apply flex flex-col gap-5 w-2/5 ;
   }
   .navbar-b {
-    @apply flex flex-row gap-0 justify-around w-full bg-white shadow-none py-0 px-0 static;
+    @apply flex flex-row gap-0 justify-around items-center w-full bg-white shadow-none py-0 px-0 static;
   }
 }
 @font-face {

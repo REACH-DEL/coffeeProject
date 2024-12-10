@@ -11,7 +11,11 @@
       class="w-100 px-10 py-10 shadow-lg rounded-2xl bg-red-50 flex flex-col items-center gap-5"
     >
       <h2 class="font-caveat text-6xl font-bold text-dark-brown">Login</h2>
-      <form action="" class="flex flex-col gap-5">
+      <form
+        action="../backend/loginController.php"
+        method="post"
+        class="flex flex-col gap-5"
+      >
         <input
           type="text"
           name="username"
@@ -34,7 +38,7 @@
       </form>
       <div class="flex gap-5">
         <p>Create new account?</p>
-        <a href="signup.jsp" class="text-blue-400">Sign up</a>
+        <a href="signup.php" class="text-blue-400">Sign up</a>
       </div>
     </div>
   </body>
