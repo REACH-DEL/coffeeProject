@@ -1,35 +1,35 @@
-<nav class="flex flex-col items-center">
-  <a class="flex gap-3" href="#">
-    <img src="../asset/image/cafelogo.png" alt="" width="46" height="46" />
-    <h1 class="text-dark-brown text-xl font-bold">CafeShop</h1></a
-  >
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link active" href="#"
-        ><img src="./asset/icon/" alt="" />Home</a
+<nav class="hidden lg:block items-center bg-light-brown h-dvh left-0 w-1/4 px-20 ">
+  <ul class="nav py-[5rem] ">
+    <li class="py-2 px-5 my-5 bg-dark-brown rounded-[2rem] text-white">
+      <a class="flex justify-center items-center gap-2" href="#"
+        ><img src="../asset/icon/home.png" alt="" />Home</a
       >
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"
-        ><img src="./asset/icon/drink.png" alt="" />Drink</a
+    <li class="py-2 px-5 my-5 bg-dark-brown rounded-[2rem] text-white">
+      <a class="flex justify-center items-center gap-2" href="#"
+        ><img src="../asset/icon/drink.png" alt="" />Drink</a
       >
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"
-        ><img src="./asset/icon/fast-food.png" alt="" />Food</a
+    <li class="py-2 px-5 my-5 bg-dark-brown rounded-[2rem] text-white">
+      <a class="flex justify-center items-center gap-2" href="#"
+        ><img src="../asset/icon/fast-food.png" alt="" />Food</a
       >
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="./cart.php"
-        ><img src="./asset/icon/cart.png" alt="" />Cart</a
+    <li class="py-2 px-5 my-5 bg-dark-brown rounded-[2rem] text-white">
+      <a class="flex justify-center items-center gap-2" href="./cart.php"
+        ><img src="../asset/icon/cart.png" alt="" />Cart</a
       >
+    </li>
+
+    <li class="py-2 px-5 my-5 bg-dark-brown rounded-[2rem] text-white">
+      <a class="flex justify-center items-center gap-2" href="#">
+        <div class="user-profile"><img src="../asset/icon/user.png" alt="" /></div>
+        <div class="user-name">user1</div>
+      </a>
     </li>
   </ul>
-  <div class="user">
-    <div class="user-profile"><img src="./asset/icon/user.png" alt="" /></div>
-    <div class="user-name">user1</div>
-  </div>
 </nav>
+
 <section id="nav">
   <div
     class="flex justify-between items-center px-8 py-2 shadow-lg fixed top-0 w-full z-1000 bg-white"
