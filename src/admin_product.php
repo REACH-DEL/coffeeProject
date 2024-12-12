@@ -13,16 +13,34 @@
         <?php include "admin.php"; ?>
         <div class="content">
             <div class="top">
-                <h2>Place to Visit</h2>              
-                <div id="addBtn" class="addBtn" onclick="onclickOpen()">
-                    <span class="material-symbols-outlined size">add</span>
-                    <p>Add</p>
-                </div>                               
+                <div class="upper">
+                    <h2>Product</h2>
+                    <div class="search">
+                        <input type="text" name="" id="search" placeholder="Search...">
+                        <button><img src="../asset/icon/searchIcon.svg" alt=""></button>
+                    </div>
+                </div>
+                
+                <div class="option">
+                    
+                    <select name="" id="">
+                        <option value="">All</option>
+                        <option value="">Drink</option>
+                        <option value="">Snack</option>
+                        <option value="">Dessert</option>
+                    </select>
+                    <div id="addBtn" class="addBtn" onclick="onclickOpen()">
+                        <span class="material-symbols-outlined size">add</span>
+                        <p>Add</p>
+                    </div>
+                </div>              
+                                               
             </div>
             <div class="add-popup" id="pop-up">
                 <div class="add-window">
                     <div class="title">
-                        <h3>Add Place to Visit</h3>
+                        <h3>Add Product</h3>
+                        
                         <div class="closeBtn" onclick="onclickClose()">
                             <span class="material-symbols-outlined size">close</span>
                         </div>                     
@@ -35,7 +53,7 @@
                             <textarea name="description" placeholder="Enter Description" required></textarea>                           
                             <input type="text" name="price" placeholder="Enter Product price" required>
                             <select name="ctype" id="">
-                            <?php include 'backend/category.php';
+                            <?php include '../backend/category.php';
                                 if($result->num_rows>0){
                                     while($row = $result->fetch_assoc()){
                             ?>
@@ -64,17 +82,9 @@
                 </div>
             </div>
             <?php $addQw = ''?>
-            <form method="post" id="typeBtn">
-                <div class="typeBtnList">
-                    <input type="submit" value="All">
-                    <input type="submit" value="New">
-                    <input type="submit" value="Coffee">
-                    <input type="submit" value="Tea">
-                    <input type="submit" value="Dessert">
-                </div> 
-            </form>
             
-            <div class="content-part">             
+            <div class="content-part">
+                             
                 <?php include'../backend/productContent.php'?>        
             </div>
         </div>
