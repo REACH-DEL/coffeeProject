@@ -3,24 +3,35 @@
 @tailwind utilities;
 
 @layer components {
-  .nav-text {
-    @apply text-base font-semibold text-dark-brown hover:text-light-brown active:text-light-brown;
-  }
-  .title {
-    @apply text-6xl font-bold;
-  }
-  .navbar-s {
-    @apply flex flex-col gap-5 w-2/5 ;
-  }
-  .navbar-b {
-    @apply flex flex-row gap-0 justify-around items-center w-full bg-white shadow-none py-0 px-0 static;
-  }
+     .nav-text {
+          @apply text-base font-semibold text-dark-brown hover:text-light-brown active:text-light-brown;
+     }
+     .bar-text {
+          @apply md:block hidden font-semibold text-lg text-dark-brown hover:text-light-brown;
+     }
+     .title {
+          @apply text-6xl font-bold;
+     }
+     .navbar-s {
+          @apply flex flex-col gap-5 w-2/5;
+     }
+     .navbar-b {
+          @apply flex flex-row gap-0 justify-around items-center w-full bg-white shadow-none py-0 px-0 static;
+     }
 }
 @font-face {
-  font-family: "Caveat";
-  src: url("../asset/font/Caveat-VariableFont_wght.ttf");
+     font-family: "Caveat";
+     src: url("../asset/font/Caveat-VariableFont_wght.ttf");
 }
 @font-face {
-  font-family: "Poppin";
-  src: url("../asset/font/Poppins-Medium.ttf");
+     font-family: "Poppin";
+     src: url("../asset/font/Poppins-Medium.ttf");
+}
+
+.glassEffect {
+     background: rgba(255, 255, 255, 0.2);
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(2.9px);
+     -webkit-backdrop-filter: blur(2.9px);
+     border: 1px solid rgba(255, 255, 255, 0.3);
 }

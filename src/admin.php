@@ -72,9 +72,25 @@
         display: none;
         cursor: pointer;
     }
+    @media(max-width: 1087px){
+        .content .top {
+            right: 10px;
+            display: block;
+            height: 20%;
+        }
+        .content .top .upper{
+            width: 100%;
+        }
+        .content .top .option{
+            width: 100%;
+            justify-content: flex-end;
+        }
+    }
     @media(max-width: 800px){
         .content .top {
             right: 10px;
+            display: block;
+            height: 20%;
         }
         .tab-bar{
             display: flex;

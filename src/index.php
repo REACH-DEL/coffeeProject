@@ -20,11 +20,11 @@
           id="menu"
         >
           <ul class="sm:navbar-b navbar-s">
-            <li>
+            <li class="h-9">
               <a href="#home" class="nav-text">Home</a>
             </li>
             <li>
-              <a href="" class="nav-text">Shop</a>
+              <a href="shop.php" class="nav-text">Shop</a>
             </li>
             <li>
               <a href="#about" class="nav-text">About</a>
