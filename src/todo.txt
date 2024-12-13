@@ -4,3 +4,8 @@ today assignment php task:
 2. create login and register backend done
 3. combine pages done
 4. backend to show data on shop pages
+
+
+today task:
+1. admin account setting
+2. user account setting

@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['token'])){
-        header("location: ../src/login.php");
+        header("location: ../src/admininLogin.php");
         exit;
     }
     $token = $_SESSION['token'];

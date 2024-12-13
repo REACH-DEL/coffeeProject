@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard/place</title>
+    <title>Admin Dashboard/Product</title>
     <link rel="stylesheet" href="../asset/css/admin.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <div class="container">
+        <?php include '../backend/adminHandler.php'?>
         <?php include "admin.php"; ?>
         <div class="content">
             <div class="top">
                 <div class="upper">
                     <h2>Product</h2>
-                    <div class="search">
-                        <input type="text" name="" id="search" placeholder="Search...">
-                        <button><img src="../asset/icon/searchIcon.svg" alt=""></button>
-                    </div>
+                    <input class="search" type="text" name="" id="search" placeholder="Search..." oninput="fetchContent()">
                 </div>
                 
                 <div class="option">
-                    
-                    <select name="" id="">
-                        <option value="">All</option>
-                        <option value="">Drink</option>
-                        <option value="">Snack</option>
-                        <option value="">Dessert</option>
+                    <select name="" id="list" onchange="fetchContent()">
+                        <option value="0">All</option>
+                        <option value="1">Drink</option>
+                        <option value="2">Snack</option>
+                        <option value="3">Dessert</option>
                     </select>
                     <div id="addBtn" class="addBtn" onclick="onclickOpen()">
-                        <span class="material-symbols-outlined size">add</span>
-                        <p>Add</p>
+                        <img src="../asset/icon/add.svg" alt="">
+                    
                     </div>
                 </div>              
                                                
@@ -42,7 +39,7 @@
                         <h3>Add Product</h3>
                         
                         <div class="closeBtn" onclick="onclickClose()">
-                            <span class="material-symbols-outlined size">close</span>
+                            <img src="../asset/icon/close.svg" alt="">
                         </div>                     
                     </div>
                     <hr>
@@ -54,8 +51,8 @@
                             <input type="text" name="price" placeholder="Enter Product price" required>
                             <select name="ctype" id="">
                             <?php include '../backend/category.php';
-                                if($result->num_rows>0){
-                                    while($row = $result->fetch_assoc()){
+                                if($cate->num_rows>0){
+                                    while($row = $cate->fetch_assoc()){
                             ?>
                                     <option value="<?php echo $row["cid"]?>"><?php echo $row["category"]?></option>
                             <?php        }
@@ -69,10 +66,11 @@
                     </div>                   
                 </div>            
             </div> 
+            
             <div class="success-screen" id="popup-result">
                 <div class="success-window">
                     <div class="close-btn" onclick="onclickCloseResult()">
-                        <span class="material-symbols-outlined size">close</span>
+                        <img src="../asset/icon/close.svg" alt="">
                     </div>
                     <div class="body">
                         <span class="material-symbols-outlined size">check_circle</span>
@@ -81,8 +79,20 @@
                     <button class="btnDone" onclick="onclickCloseResult()">Done</button>
                 </div>
             </div>
-            <?php $addQw = ''?>
-            
+            <div class="edit-popup" id="edit-popup">
+                <div class="edit-screen">
+                    <div class="title">
+                        <h3>Edit Product</h3>
+                        <div class="closeBtn" onclick="onclickCloseEdit()">
+                            <img src="../asset/icon/close.svg" alt="">
+                        </div>                     
+                    </div>
+                    <hr>
+                    <div class="body">
+                        <?php include '../backend/editController.php';?>
+                    </div>
+                </div>
+            </div>
             <div class="content-part">
                              
                 <?php include'../backend/productContent.php'?>        
@@ -112,10 +122,12 @@
             document.getElementById("popup-result").style.display = "none";
             window.location.reload();
         }
-
+        function onclickCloseEdit(){
+            document.getElementById('edit-popup').style.display = "none";
+        }
         
         
     </script>
-    <script src="asset/js/api.js"></script>
+    <script src="../asset/js/api.js"></script>
 </body>
 </html>

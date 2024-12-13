@@ -23,24 +23,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 75%;
+  width: 82%;
 }
 .content .top .option {
-  width: 25%;
+  width: 18%;
   padding: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 20px;
   align-items: center;
 }
-.content .top .search {
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-}
-.content .top .search input {
+
+.content .top input {
   padding: 10px;
   border-radius: 20px;
+}
+.content .top .option select {
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .content .top .addBtn {
@@ -268,4 +268,84 @@ textarea {
 }
 .content-card .right-part .info .detail {
   font-size: smaller;
+}
+
+.edit-popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.edit-popup .edit-screen {
+  background-color: whitesmoke;
+  width: 70%;
+  height: 80%;
+  box-shadow: 0 5px 10px rgb(0 0 0/20%);
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+  display: block;
+}
+.edit-popup .edit-screen .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-popup .edit-screen .title .closeBtn {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.edit-popup .edit-screen .title .closeBtn:hover {
+  background-color: rgb(200, 200, 200);
+}
+.edit-popup .edit-screen .body {
+  display: flex;
+  height: 90%;
+  align-items: center;
+  justify-content: space-around;
+}
+.edit-popup .edit-screen .body img {
+  width: 40%;
+  height: 90%;
+}
+.edit-popup .edit-screen .body form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.edit-popup .edit-screen .body form .button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+.edit-popup .edit-screen .body form .button .cancelBtn {
+  background-color: rgb(203, 0, 0);
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+.edit-popup .edit-screen .body form .button .changeBtn {
+  background-color: purple;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+.edit-popup .edit-screen .body input,
+select {
+  padding: 10px;
+  border-radius: 20px;
+}
+.edit-popup .edit-screen .body select {
+  width: 35%;
 }

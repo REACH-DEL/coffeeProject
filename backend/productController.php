@@ -18,11 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $ran = rand();
     $imgRan = $ran.$img['name'];
-    $imgPath = $_SERVER['DOCUMENT_ROOT']."/CafeProject/asset/image/".$imgRan;
+    $imgPath = $_SERVER['DOCUMENT_ROOT']."/cafeshop/asset/image/".$imgRan;
     $imgDb = "../asset/image/".$imgRan;
     
     if(move_uploaded_file($img['tmp_name'], $imgPath)) {
-        echo 'Image uploaded successfully to ' . $imgPath; // Debug message
         $inDate = date('Y/m/d H:m:s');
         
         include 'dbCon.php';
