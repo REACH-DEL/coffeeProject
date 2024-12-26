@@ -10,7 +10,7 @@
     <div
       class="w-100 px-10 py-10 shadow-lg rounded-2xl bg-red-50 flex flex-col items-center gap-5"
     >
-      <h2 class="font-caveat text-6xl font-bold text-dark-brown">Admin Account Login</h2>
+      <h2 class="font-caveat text-6xl font-bold text-dark-brown">Admin Account</h2>
       <form
         action="../backend/adminLoginController.php"
         method="post"

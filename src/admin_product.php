@@ -125,9 +125,18 @@
         function onclickCloseEdit(){
             document.getElementById('edit-popup').style.display = "none";
         }
+        function logout() {
+            fetch('../backend/adminLogout.php')
+            .then(data => {
+                location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
         
         
     </script>
-    <script src="../asset/js/api.js"></script>
+    <script src="../asset/js/product_api.js"></script>
 </body>
 </html>

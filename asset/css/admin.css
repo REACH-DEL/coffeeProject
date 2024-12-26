@@ -6,9 +6,38 @@ body {
   margin-left: 10px;
   width: 78%;
 }
+.content .setting {
+  /*for admin_user only */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: white;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  padding-top: 50px;
+  border-radius: 20px;
+}
+
+.content .setting form input {
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+.content .setting form .updateBtn {
+  width: 200px;
+  color: rgb(100, 2, 2);
+}
+.content .setting form .updateBtn:hover {
+  background-color: brown;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
 .content .top {
   position: fixed;
-  right: 25px;
+  right: 40px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -17,7 +46,7 @@ body {
   border-radius: 20px;
   padding: 20px;
   height: 13%;
-  width: 75%;
+  width: 76%;
 }
 .content .top .upper {
   display: flex;
@@ -216,7 +245,8 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding-top: 5px;
   background-color: white;
   margin-top: 100px;

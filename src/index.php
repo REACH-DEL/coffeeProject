@@ -20,7 +20,7 @@
           id="menu"
         >
           <ul class="sm:navbar-b navbar-s">
-            <li class="h-9">
+            <li>
               <a href="#home" class="nav-text">Home</a>
             </li>
             <li>

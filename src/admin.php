@@ -39,6 +39,17 @@
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
+    position: relative;
+    }
+    .tab-box button{
+        position: absolute;
+        bottom: 20px;
+        font-size: 18px;
+        color: rgb(83, 83, 83);
+        padding: 5px;
+    }
+    .tab-box button:hover{
+        background-color: rgb(200, 200, 200);
     }
     .tab-box .title {
     font-size: 35px;
@@ -130,6 +141,7 @@
             position: fixed;
             height: 90%;
             width: 50%;
+            z-index: 10;
         }
         .tab-box .tab-bar .tab-item .tab-text{
             font-size: 15px;
@@ -180,12 +192,18 @@
                 </a>
             </li>
             <li class="tab-item">
-                <a href="Transportation">
+                <a href="admin_user.php">
+                    <img src="../asset/icon/user.png" alt="">
+                    <p class="tab-text">User</p>
+                </a>
+            </li>
+            <li class="tab-item">
+                <a href="admin_setting.php">
                     <span class="material-symbols-outlined">settings</span>
                     <p class="tab-text">Setting</p>
                 </a>
             </li>
-            <li class="tab-item"></li>
-        </ul>       
+        </ul> 
+        <button onclick="logout()"><img src="../asset/icon/logout.svg" alt="" width="34px" height="34px">Logout</button>      
     </div>
 </aside>

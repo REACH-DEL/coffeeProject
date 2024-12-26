@@ -6,6 +6,7 @@
         $gender = $_POST['gender'];
         $token = bin2hex(random_bytes(16));
         $img = '';
+        $dateIn = date('Y/m/d H:m:s');
         if ($gender == 'male'){
             $img = '../asset/image/muser.png';
         }else{

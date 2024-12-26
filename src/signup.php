@@ -53,7 +53,7 @@
       </form>
       <div class="flex gap-5">
         <p>Already have an account?</p>
-        <a href="login.jsp" class="text-blue-400">Login</a>
+        <a href="login.php" class="text-blue-400">Login</a>
       </div>
     </div>
   </body>

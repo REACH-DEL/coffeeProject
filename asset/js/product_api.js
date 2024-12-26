@@ -69,34 +69,6 @@ function editBtn() {
   });
 }
 
-// document.getElementById("changeBtn").addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   const formData = new FormData(document.getElementById("formEdit"));
-
-//   fetch("../backend/editHandler.php", {
-//     method: "POST",
-//     body: formData,
-//   })
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error("Network response was not ok: " + response.status);
-//       }
-//       return response.text();
-//     })
-//     .then((data) => {
-//       if (data.includes("success")) {
-//         document.getElementById("edit-popup").style.display = "none";
-//         document.getElementById("popup-result").style.display = "flex";
-//         this.reset();
-//       } else {
-//         alert("Error saving place. Please try again.");
-//       }
-//     })
-//     .catch((error) => {
-//       alert("Error: " + error.message);
-//     });
-// });
 function fetchContent() {
   const searchQuery = document.getElementById("search").value;
   const listQuery = document.getElementById("list").value;

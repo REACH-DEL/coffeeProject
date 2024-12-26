@@ -1,7 +1,4 @@
 <?php
-echo ("Data recieve: ");
-print_r($_POST);
-print_r($_FILES);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $ctype = (int)$_POST["ctype"];
     $name = $_POST["name"];
@@ -9,8 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $price = (float)$_POST["price"];
     $img = $_FILES['img'];
     
-    
-    // Validate inputs
     if(empty($name) || empty($description) || empty($price) || empty($ctype) || empty($img)) {
         echo 'error';
         exit;
